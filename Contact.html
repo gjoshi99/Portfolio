@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./Contact.css">
+    <link rel="stylesheet" href="./tabbar.css">
+</head>
+<body>
+  <div class="Container">
+      <h1>Contact information to Shpat</h1>
+        <p class="contactMeText">
+          I’m always excited to explore new opportunities and contribute to meaningful projects. 
+          If you’re looking for someone passionate, dedicated, and ready to make an impact, 
+          don’t hesitate to get in touch. Let’s discuss how I can help your team succeed!
+        </p>
+      <div class="InfoContainer" ></div>
+
+
+
+          <div class="Tab">
+          <div class="tabContainer" >
+            <div class="home">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="homeIcon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+                <p>Home</p>
+            </div>
+
+            <div class="Contact" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="contactIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <p>Contact</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="./tabbar.js" defer></script>
+<script src="./infoData.js"></script>
+<script>
+
+  const InfoContainer = document.querySelector('.InfoContainer');
+
+
+
+  for (const info of infoData) {
+    const createInfoCard = document.createElement('div');
+    const createInfoCardImage = document.createElement('img');
+    const createInfoCardButton = document.createElement('button');
+
+
+    console.log(info.imageUri)
+
+      createInfoCard.classList.add('InfoCard');
+
+      createInfoCardImage.src = info.imageUri;
+      createInfoCardButton.textContent = info.buttonContent;
+
+    InfoContainer.appendChild(createInfoCard);
+      createInfoCard.appendChild(createInfoCardImage);  
+      createInfoCard.appendChild(createInfoCardButton);
+
+      createInfoCardButton.addEventListener('click', () => {
+        window.open(info.redirectTo,"_blank")
+      })
+  }
+
+</script>
+</html>

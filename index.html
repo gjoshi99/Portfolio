@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./tabbar.css">
+</head>
+<body>
+    <div class="Container">
+        <div class="Header" >
+            <h1>My Portfolio</h1>
+        </div>
+
+        <div class="imageContainer">
+            <span class="left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="leftIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </span>
+            <img  class="profileImage" alt="image could not be shown">
+            <span class="right">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="rightIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </span>
+
+            <div class="imageEditor">
+                    <p>
+                        Drag the slider to adjust how rounded the image corners are.
+                        Moving it to the right increases the radius for a softer, more rounded look,
+                        while moving it to the left keeps the corners sharper.
+                    </p>
+
+                    <div class="inputRangeContainer">
+                    <input max="100" min="10" value="10" type="range" name="points" class="imageRadius">
+                    <p class="imageRadiusP"></p>
+                    </div>
+            </div>
+        </div>
+
+
+        <div class="Description" >
+            <div class="descriptionTitle">
+                <span class="line" ></span>
+                <h2>Full-Stack & Mobile Developer</h2>
+                 <span class="line" ></span>
+            </div>
+            <p>
+                 My name is Shpat Gjoshi, and I am a full-stack developer with strong experience in building modern web and mobile applications from start to finish. I specialize in both backend and frontend development, working extensively with Node.js and Express.js to create scalable, secure server-side solutions, and with React and React Native to build responsive, high-performance user interfaces for web and mobile platforms.
+            </p>
+
+            <p>
+                 I have a solid foundation in JavaScript and work confidently with HTML and CSS to create clean, accessible, and user-friendly designs. On the mobile side, I have experience developing and publishing real-world applications, including my app <strong>Resell</strong>, which is available on the Apple App Store. This has given me hands-on experience with the full app lifecycle — from development and testing to deployment and maintenance.
+            </p>
+
+            <p>
+                 In addition to JavaScript-based technologies, I also work with MongoDB for database design and data management, and I have experience with Swift and Python, allowing me to adapt to different platforms and technical requirements. I enjoy solving complex problems, learning new technologies, and continuously improving my skills to build efficient, scalable, and maintainable applications.
+            </p>
+        </div>
+
+        <div class="animatedComputerLanguage">
+            <img style="width: 70px; height: 70px;" src="./images/html.png">
+            <img src="./images/css.png">
+            <img src="./images/Node.js.png">
+            <img src="./images/javascript.jpg">
+            <img src="./images/react.png">
+            <img src="./images/python.png">
+            <img style="width: 60px; height: 60px;" src="./images/swift.png">
+        </div>
+            <div class="animationController" >
+                <p>Controll the speed of the animation</p>
+                <input type="range" value="13000" min="4000" max="13000" class="animationControllerInput">
+                <p class="animationControllerInputDisplay" >0</p>
+            </div>
+
+
+        <div class="locationInterface">
+           <iframe
+            class="locationMap"
+            src="https://www.google.com/maps?q=Stockholm&output=embed"
+            width="400"
+            height="300"
+            style="border:0;border-radius: 10px;"
+            loading="lazy">
+            </iframe>
+
+            <button class="locationButton" >Show me my location</button>
+        </div>
+
+
+        <h2>Drag and Drop</h2>
+        <div class="dragAnddropContainer" >
+            <div class="squere">
+                <img class="draggableSwift" src="./images/swift.png" style="width: 60px; height: 60px;">
+            </div>
+            <div class="squere"></div>
+            <div class="squere"></div>
+            <div class="squere"></div>
+        </div>
+
+
+        <div class="cameraInteractionDiv" >
+            <div class="CameraDisplayDiv" >
+            <p class="CameraDisplayText">
+                Click on the open camera button to interact with
+                your camera
+            </p>
+            <video autoplay  class="CameraDisplay" >
+            </video>
+            </div>
+            <button class="openCameraButton" >Open camera</button>
+            <button class="closeCameraButton" >Close camera</button>
+        </div>
+
+        <div class="Tab">
+          <div class="tabContainer" >
+            <div class="home">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="homeIcon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+                <p>Home</p>
+            </div>
+
+            <div class="Contact" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="contactIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <p>Contact</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="./tabbar.js" defer></script>
+<script>
+    const Container = document.querySelector('.Container');
+
+
+    // image control
+    const profileImage = document.querySelector('.profileImage');
+    const leftArrow = document.querySelector('.left')
+    const rightArrow = document.querySelector('.right')
+
+    let index = 1;
+    let maxIndex = 2;
+    let imageSource = `./images/image${index}.jpg`
+    profileImage.src = imageSource;
+
+    leftArrow.addEventListener('click', () => {
+        if(index === 1) return
+        index -= 1
+        let imageSource = `./images/image${index}.jpg`
+        profileImage.src = imageSource;
+    })
+
+    rightArrow.addEventListener('click', () => {
+        if(index === maxIndex) index = 0
+        index += 1
+        let imageSource = `./images/image${index}.jpg`
+        profileImage.src = imageSource;
+    })
+
+    const imageRadius = document.querySelector('.imageRadius');
+    const imageRadiusP = document.querySelector('.imageRadiusP');
+
+
+    imageRadiusP.textContent = `${localStorage.getItem('imageRadius')}px`;
+    profileImage.style.borderRadius = `${localStorage.getItem('imageRadius')}px`
+    imageRadius.value = Number(localStorage.getItem('imageRadius'));
+
+    imageRadius.addEventListener('input', () => {
+        imageRadiusP.textContent = `${imageRadius.value}px`;
+        profileImage.style.borderRadius = `${imageRadius.value}px`
+        localStorage.setItem('imageRadius', imageRadius.value)
+    })
+
+    // image control
+
+
+
+    // this part if for the computer languages animated
+    const animatedComputerLanguage = document.querySelector('.animatedComputerLanguage');
+
+
+    function animationFunction(duration) {
+        for (const element of animatedComputerLanguage.children) {
+        element.animate([
+                { transform: "translateX(0px)" },
+                { transform: `translateX(${screen.width}px)` }
+        ],{
+            duration: duration,
+            iterations: Infinity,
+        })
+     } 
+    }
+
+
+
+
+    const animationControllerInput = document.querySelector('.animationControllerInput');
+    const animationControllerInputDisplay = document.querySelector('.animationControllerInputDisplay');
+
+    animationFunction(Number(animationControllerInput.value))
+
+        animationControllerInputDisplay.textContent = `${Math.round(animationControllerInput.value / 1000)} s`
+
+        animationControllerInput.addEventListener('input', () => {
+            animationControllerInputDisplay.textContent = `${Math.round(animationControllerInput.value / 1000)} s`
+            animationFunction(Number(animationControllerInput.value))
+        })
+
+
+    // this part if for the computer languages animated
+
+
+    // this is the location part
+        const locationButton = document.querySelector('.locationButton');
+        const locationMap = document.querySelector('.locationMap');
+
+        const res = () => {
+            return new Promise((res,rej) => { 
+               const location = navigator.geolocation.getCurrentPosition((success) => {
+                    if(success) res(success)
+                }, (err) => {
+                    if(err) rej(err)
+                })
+                return location
+            })
+        }
+
+        locationButton.addEventListener('click', async () => {
+            const {coords} = await res();
+            const {longitude, latitude} = coords
+
+            if(!longitude || !latitude) return alert('Something went wrong please try agian');
+
+                locationMap.src = `https://www.google.com/maps?q=${latitude},${longitude}&output=embed`
+
+        })
+        // this is the location part
+
+
+
+        // this is the part of making the app draggable
+        const allSqueres = document.querySelectorAll('.squere');
+        const draggableSwift = document.querySelector('.draggableSwift');
+
+        let draggedElement;
+
+
+        draggableSwift.addEventListener("drag",  (event) => {
+            console.log('dragging')
+        })
+
+        draggableSwift.addEventListener('dragstart', (event) =>{
+            draggedElement = event.target
+
+            event.target.classList.add("dragging");
+        })
+
+        draggableSwift.addEventListener('dragend', (event) => {
+             event.target.classList.remove("dragging");
+        })
+
+        for (const squere of allSqueres) {
+            squere.addEventListener('dragenter', (event) => {
+                if (event.target.classList.contains("squere")){
+                    event.target.classList.add('dragenter')
+                }
+            })
+            squere.addEventListener('dragleave', (event) => {
+                if(event.target.classList.contains('dragenter')) {
+                    event.target.classList.remove("dragenter");
+                }
+            })
+
+
+            squere.addEventListener('dragover', (event) => {
+                event.preventDefault();
+
+            })
+
+            squere.addEventListener('drop', (event) => {
+                if (event.target.classList.contains("squere")) {
+                    event.target.classList.remove("dragenter");
+                    event.target.appendChild(draggedElement)
+                }
+            })
+
+        }
+        // this is the part of making the app draggable
+
+
+        // this is the part of interacting with your camera
+        const CameraDisplay = document.querySelector('.CameraDisplay');
+        const openCameraButton = document.querySelector('.openCameraButton');
+        const closeCameraButton = document.querySelector('.closeCameraButton');
+        const CameraDisplayText = document.querySelector('.CameraDisplayText');
+        let stream
+
+        openCameraButton.addEventListener('click', async() => {
+            CameraDisplayText.style.visibility = "hidden"
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({video: {width: 500, height:500}, audio:true,});
+                CameraDisplay.srcObject = stream
+                CameraDisplay.style.visibility = "visible";
+            } catch (error) {
+                alert(error)
+                return
+            }
+        })
+
+        closeCameraButton.addEventListener('click', async() => {
+            CameraDisplayText.style.visibility = "visible"
+            try {
+                if(stream){
+                    stream.getTracks().forEach(track => track.stop());
+                    CameraDisplay.style.visibility = "hidden";
+                    CameraDisplay.srcObject = null;
+                }
+            } catch (error) {
+                alert(error)
+            }
+        })
+
+
+
+
+        // this is the part of interacting with your camera
+
+</script>
+</html>
