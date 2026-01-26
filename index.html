@@ -58,6 +58,11 @@
             <p>
                  In addition to JavaScript-based technologies, I also work with MongoDB for database design and data management, and I have experience with Swift and Python, allowing me to adapt to different platforms and technical requirements. I enjoy solving complex problems, learning new technologies, and continuously improving my skills to build efficient, scalable, and maintainable applications.
             </p>
+            <div class="CertificatesDiv">
+                <img src="./certificates/java_script_cert.pdf" alt="javascript img">
+                <img src="./certificates/python-cert.pdf" alt="python image">
+                <img src="./certificates/react-native-cert.pdf" alt="React native image">
+            </div>
         </div>
 
         <div class="animatedComputerLanguage">
@@ -178,6 +183,37 @@
 
     // image control
 
+
+    // CertificatesDiv----------------------------------------------
+
+        const CertificatesDiv = document.querySelector('.CertificatesDiv');
+
+        for (const img of CertificatesDiv.children) {
+            img.addEventListener('click', () => {
+                document.body.style.overflow = "hidden"
+                const createModal = document.createElement('div');
+                const createIframe = document.createElement('iframe');
+
+                console.log(img.src)
+
+                    createModal.classList.add('modalStyle');
+                    createIframe.src = img.src;
+
+                createModal.appendChild(createIframe);
+                document.body.appendChild(createModal)
+
+                createModal.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    document.body.style.overflow = ""
+                    createModal.innerHTML= ""
+                    createModal.remove();
+                })
+            })
+        }
+
+
+
+    // CertificatesDiv----------------------------------------------
 
 
     // this part if for the computer languages animated
