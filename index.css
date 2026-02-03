@@ -294,11 +294,12 @@ body{
     width: fit-content;
     padding: 10px;
     height: 45px;
-    color: White;
+    color: black;
     border-radius: 20px;
     font-size: 18px;
     border-color: transparent;
     font-weight: bold;
+    font-family: sans-serif;
     box-shadow: 5px 5px 1px black;
 }
 .locationInterface button:hover{
@@ -407,4 +408,327 @@ h2{
     box-shadow: 2px 2px 2px black;
     cursor: pointer;
     font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+body{
+    padding: 0;
+    margin: 0;
+    touch-action: manipulation;
+    background-color: #3a4750;
+    max-width: 100%;
+}
+.Container{
+    background-color: #3a4750;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 100px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.imageContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    align-content: center;
+}
+.left{
+    display: none;
+}
+.right{
+    display: none;
+}
+.imageContainer img{
+    width: 150px;
+    height: 150px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.imageEditor{
+    width: fit-content;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inputRangeContainer{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: fit-content;
+}
+.imageRadius {
+    width: 50%;
+}
+.imageEditor p{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.Description{
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descriptionTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.descriptionTitle h2{
+    text-decoration: underline;
+}
+.line{
+    display: none;
+}
+
+.Description p{
+    max-width: 90%;
+    text-align:left;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.CertificatesDiv{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #364958;
+    border-radius: 10px;
+    box-shadow: 5px 7px 3px black;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    gap: 25px;
+}
+
+.CertificatesDiv img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border-color: green;
+    border-style: solid;
+    border-width: 2px;
+}
+.modalStyle iframe{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    overflow: auto;
+    border-radius: 6px;
+}
+
+
+
+.animatedComputerLanguage{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 5px;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    border-radius: 0px;
+    gap: 8px;
+}
+
+.animatedComputerLanguage img{
+    width: 70px;
+    height: 70px;
+    object-position: center;
+    object-fit:contain;
+}
+
+.animationController{
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.animationController input[type="range"] {
+    width: 60%;
+    height: fit-content;
+    accent-color: blue;
+}
+
+.animationController p {
+    margin: 2px;
+    padding: 0;
+}
+
+
+
+
+.locationInterface{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.locationInterface iframe{
+    width: 200px;
+    height: 200px;
+}
+.locationInterface button{
+    width: fit-content;
+    padding: 10px;
+    height: 45px;
+    color: black;
+    border-radius: 20px;
+    font-size: 12px;
+    border-color: transparent;
+    font-weight: bold;
+    box-shadow: 5px 5px 1px black;
+    word-break: normal;
+    max-width: 100px;
+}
+.locationInterface button:hover{
+    cursor: pointer;
+    box-shadow: none;
+    scale: 1.1;
+}
+.locationInterface button:active{
+    cursor: pointer;
+    scale: 0.8;
+    opacity: 0.7;
+}
+
+
+
+
+
+h2{
+    align-self: center;
+}
+.dragAnddropContainer{
+    width: 100%;
+    height: fit-content;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.dragAnddropContainer .squere{
+    width:  70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dragAnddropContainer .squere img:hover{
+    cursor: pointer;
+}
+.dragenter{
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    scale: 0.8;
+}
+
+.dragging{
+    opacity: 0.8;
+    transform: scale(0.7);
+    cursor: grabbing;
+}
+
+
+
+
+.cameraInteractionDiv{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.CameraDisplayDiv{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.CameraDisplay{
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transform: scaleX(-1);
+}
+
+.openCameraButton{
+    width: 70px;
+    height: 45px;
+    background-color: green;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px black;
+}
+.closeCameraButton{
+    width: 70px;
+    height: 45px;
+    background-color: darkred;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px black;
+}
+
+.openCameraButton:hover,.closeCameraButton:hover{
+    scale: 1.1;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    font-size: 14px;
+}
 }

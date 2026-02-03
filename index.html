@@ -35,7 +35,7 @@
 
                     <div class="inputRangeContainer">
                     <input max="100" min="10" value="10" type="range" name="points" class="imageRadius">
-                    <p class="imageRadiusP"></p>
+                    <p class="imageRadiusP">10px</p>
                     </div>
             </div>
         </div>
@@ -93,6 +93,7 @@
 
             <button class="locationButton" >Show me my location</button>
         </div>
+
 
 
         <h2>Drag and Drop</h2>
@@ -190,11 +191,13 @@
 
         for (const img of CertificatesDiv.children) {
             img.addEventListener('click', () => {
+                  if (window.innerWidth <= 600) {
+                        window.open(img.src, "_blank");
+                        return;
+                    }
                 document.body.style.overflow = "hidden"
                 const createModal = document.createElement('div');
                 const createIframe = document.createElement('iframe');
-
-                console.log(img.src)
 
                     createModal.classList.add('modalStyle');
                     createIframe.src = img.src;
