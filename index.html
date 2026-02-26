@@ -125,6 +125,24 @@
             <button class="closeCameraButton" >Close camera</button>
         </div>
 
+        <div class="NotificationsDiv">
+            <div class="notificationDisplay">
+                <p class="notificationStatus"></p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="notificationIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.143 17.082a24.248 24.248 0 0 0 3.844.148m-3.844-.148a23.856 23.856 0 0 1-5.455-1.31 8.964 8.964 0 0 0 2.3-5.542m3.155 6.852a3 3 0 0 0 5.667 1.97m1.965-2.277L21 21m-4.225-4.225a23.81 23.81 0 0 0 3.536-1.003A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6.53 6.53m10.245 10.245L6.53 6.53M3 3l3.53 3.53" />
+                </svg>
+            </div>
+            <div class="notificationButtonDiv">
+                <p style="font-size: 12px;max-width: 200px; text-align: center;" >By clicking this you will get a prompt to give permission for the notification</p>
+                <button class="notificationButton" >Continue</button>
+            </div>
+
+            <div class="notificationOnDiv">
+                <input type="text" placeholder="This text will be shown on you notification" class="notificationInput">
+                <button class="showNotificationButton" >Show notification</button>
+            </div>
+        </div>
+
         <div class="Tab">
           <div class="tabContainer" >
             <div class="home">
@@ -373,6 +391,91 @@
 
 
         // this is the part of interacting with your camera
+
+
+
+        //this is the notification part
+        function askNotificationPermission() {
+        // Check if the browser supports notifications
+        if (!("Notification" in window)) {
+            console.log("This browser does not support notifications.");
+            return;
+        }
+        Notification.requestPermission().then((permission) => {
+            // set the button to shown or hidden, depending on what the user answers
+            notificationDisplay.style.display = "none";
+            notificationButtonDiv.style.display = "none";
+            notificationOnDiv.style.display = "flex";
+        });
+        }
+
+
+
+        const NotificationsDiv = document.querySelector('.NotificationsDiv');
+        const notificationDisplay = document.querySelector('.notificationDisplay');
+        const notificationStatus = document.querySelector('.notificationStatus');
+        const notificationButtonDiv = document.querySelector('.notificationButtonDiv');
+        const notificationButton = document.querySelector('.notificationButton');
+
+
+        Notification.requestPermission().then((res) => {
+            notificationStatus.textContent = `Your current status is ${res}`
+            console.log(res)
+        })
+
+        function checkStatus() {
+             if(Notification.permission === "granted"){
+                notificationDisplay.style.display = "none";
+                notificationButtonDiv.style.display = "none";
+                notificationOnDiv.style.display = "flex";
+            }  
+        }
+   
+
+
+        notificationButton.addEventListener('click', () => askNotificationPermission())
+
+
+
+        const notificationOnDiv = document.querySelector('.notificationOnDiv');
+        const notificationInput = document.querySelector('.notificationInput');
+        const showNotificationButton = document.querySelector('.showNotificationButton');
+
+        function showNotificaion() {
+            if(notificationInput.value.trim().length <= 0){
+                return alert('the text input can not be empty');
+            }
+            const notificationInputValue = notificationInput.value;
+            const notificationIcon = "https://gjoshi99.github.io/Portfolio/public/images/notificationIcon.jpg"
+
+            new Notification('Notification Test',{
+                body: notificationInputValue,
+                icon: notificationIcon
+            })
+        }
+
+
+        showNotificationButton.addEventListener('click', () => {
+            showNotificaion();
+            notificationInput.value = "";
+        })
+
+        document.addEventListener("keypress", (e) => {
+            if(e.key === "Enter"){
+                showNotificaion()
+                notificationInput.value = "";
+                return;
+            }
+        })
+
+
+
+        //this is the notification part
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            checkStatus()
+        })
 
 </script>
 </html>
