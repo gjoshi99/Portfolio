@@ -28,5 +28,10 @@ const infoData = [{
     imageUri: path + "phoneicon.avif",
     buttonContent: "Call me",
     redirectTo: "tel:+46762438257"
+},
+{
+    imageUri: path + "pdfImage.png",
+    buttonContent: "Web-site",
+    redirectTo: "https://invoicedoc.se",
 }
 ]
